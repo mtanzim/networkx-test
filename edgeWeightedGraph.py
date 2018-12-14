@@ -2,6 +2,7 @@ import networkx as nx
 import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
+from networkx.algorithms import tree
 
 def edgeWeightedGraph(fileName="ewg.png"):
   print()
@@ -25,7 +26,23 @@ def edgeWeightedGraph(fileName="ewg.png"):
     (6,4,0.93),
   ])
 
-  print(list(G.nodes))
+  # print(list(G.nodes))
+
+  print ('Minimum Spanning Tree')
+  mst = tree.minimum_spanning_edges(G, algorithm='kruskal', data=False)
+  edgelist = list(mst)
+  edgeAttr = nx.get_edge_attributes(G, 'weight')
+
+  mstWeight = 0
+  print ('Edge Weight List')
+  for edge in edgelist:
+    mstWeight += float(edgeAttr[edge])
+    print(edgeAttr[edge])
+
+  print ('Total MST Weight: ' + str(mstWeight))
+
+  print('List of edges')
+  print(sorted(edgelist))
 
   labels = nx.get_edge_attributes(G,'weight')
   pos = nx.circular_layout(G)

@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 networkx = "*"
 matplotlib = "*"
+pylint = "*"
+scipy = "*"
 
 [requires]
 python_version = "3.6"

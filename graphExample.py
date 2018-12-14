@@ -38,7 +38,7 @@ def graphExample(fileName="simpleGraph.png"):
         except:
             print('No path for node: ' + str(i))
 
-    nx.draw(G, pos=nx.spring_layout(G), with_labels=True, font_weight='bold')
+    nx.draw(G, pos=nx.circular_layout(G), with_labels=True, font_weight='bold')
     print("Saving file to " + str(fileName))
     plt.savefig(fileName)
     print()

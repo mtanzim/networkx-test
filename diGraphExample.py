@@ -3,7 +3,9 @@ import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
 
-def diGraphExample(fileName="diGraph.png"):
+from constants import SUBDIRNAME
+
+def diGraphExample(fileName="./"+SUBDIRNAME+"/diGraph.png"):
     print()
     G = nx.DiGraph()
     G.add_nodes_from(range(0, 6))

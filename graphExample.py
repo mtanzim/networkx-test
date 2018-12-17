@@ -2,9 +2,11 @@ import networkx as nx
 import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
+from constants import SUBDIRNAME
 
 
-def graphExample(fileName="simpleGraph.png"):
+
+def graphExample(fileName="./"+SUBDIRNAME+"/simpleGraph.png"):
     print()
     G = nx.Graph()
 

@@ -47,6 +47,14 @@ def dijkstraPathExample(fileName="./"+SUBDIRNAME+"/dijkstraSP.png"):
     print('updated graph')
     print(G.edges.data())
 
+    print('Calculating longest path using Topological sort if DAG')
+    print('Is DAG: ' + str(nx.is_directed_acyclic_graph(G)))
+    if (nx.is_directed_acyclic_graph(G)):
+        print('Longest Path')
+        print(nx.dag_longest_path(G))
+        print('Longest Path Weight')
+        print(nx.dag_longest_path_length(G))
+
     labels = nx.get_edge_attributes(G, 'sp0')
     pos = nx.spring_layout(G)
     nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)

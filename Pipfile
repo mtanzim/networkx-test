@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 autopep8 = "*"
+rope = "*"
 
 [packages]
 networkx = "*"
@@ -12,6 +13,8 @@ matplotlib = "*"
 pylint = "*"
 scipy = "*"
 pydot = "*"
+requests = "*"
+bellmanford = "*"
 
 [requires]
 python_version = "3.6"

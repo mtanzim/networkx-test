@@ -125,7 +125,7 @@ def main():
     print('Ending Value in: '+startCur)
     print(round(newVal, ROUNDING_DIGITS))
     print('Profit in: '+startCur)
-    print(round(newVal, ROUNDING_DIGITS))
+    print(round(newVal - startVal, ROUNDING_DIGITS))
 
     print()
     print('Starting Value in: '+BASECUR)

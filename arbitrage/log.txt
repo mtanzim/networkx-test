@@ -1,0 +1,45 @@
+
+API DATA
+USD_JPY	88.1548784
+USD_USD	1.0000000
+JPY_EUR	0.0086468
+BTC_USD	118.6585613
+JPY_BTC	0.0000924
+USD_EUR	0.6692987
+EUR_USD	1.3037373
+EUR_JPY	133.5783625
+JPY_USD	0.0111154
+BTC_BTC	1.0000000
+EUR_BTC	0.0114145
+BTC_JPY	12146.6277478
+JPY_JPY	1.0000000
+BTC_EUR	87.5255676
+EUR_EUR	1.0000000
+USD_BTC	0.0071429
+
+
+Building Graph Edges
+Visualizing graph to ./plots/curArb.png
+
+Building Ln Graph Edges
+Checking negative cycles
+Negative cycles found!
+JPY -> BTC
+BTC -> JPY
+Visualizing graph to ./plots/curArbLn.png
+
+Starting conversions with below arbitrage cycle:
+['JPY_BTC', 'BTC_JPY']
+
+Starting Value in: JPY
+1000.000000
+Ending Value in: JPY
+1122.348404
+Profit in: JPY
+122.348404
+
+Starting Value in: USD
+122.348404
+Profit in: USD
+1.359951
+

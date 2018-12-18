@@ -11,6 +11,7 @@ networkx = "*"
 matplotlib = "*"
 pylint = "*"
 scipy = "*"
+pydot = "*"
 
 [requires]
 python_version = "3.6"
